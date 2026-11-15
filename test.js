@@ -1,0 +1,9 @@
+const assert=require('assert'),fs=require('fs');const S=require('./web/inference.js'),w=require('./web/weights.json'),fixtures=require('./web/parity.json');let tests=0;function check(name,fn){fn();console.log('PASS',name);tests++;}
+fixtures.forEach((f,i)=>check('Python/JS calibrated probability and feature parity '+i,()=>{let p=S.predict(f.signal,w);for(let model of ['cnn','baseline'])p[model].forEach((v,j)=>assert(Math.abs(v-f[model][j])<2e-5,`${model} ${v} ${f[model][j]}`));p.features.forEach((v,j)=>assert(Math.abs(v-f.features[j])<2e-5,`${j}: ${v} ${f.features[j]}`));}));
+check('valid CSV with header',()=>assert.equal(S.validateCSV('signal\n'+fixtures[0].signal.join('\n')).length,1024));
+for(let [name,text] of [['flat',Array(1024).fill(1).join('\n')],['NaN',Array(1024).fill('NaN').join('\n')],['short','1\n2'],['multicolumn',Array(1024).fill('1,2').join('\n')],['oversize','x'.repeat(100001)],['blank',Array(1024).fill('').join('\n')],['Infinity',Array(1024).fill('Infinity').join('\n')]])check('reject '+name,()=>assert.throws(()=>S.validateCSV(text)));
+check('normalization offset/scale invariance',()=>{let a=S.predict(fixtures[0].signal,w),b=S.predict(fixtures[0].signal.map(v=>v*2+3),w);a.cnn.forEach((v,i)=>assert(Math.abs(v-b.cnn[i])<1e-6));});
+check('split reference records disjoint',()=>{let r=require('./results.json').records;let all=Object.values(r).flat();assert.equal(all.length,new Set(all).size)});
+check('noise split ranges disjoint',()=>{let r=Object.values(require('./results.json').noise_time_seconds);assert(r[0][1]<r[1][0]&&r[1][1]<r[2][0]);});
+check('test predictions reconstruct accuracy',()=>{let r=require('./results.json'),p=require('./web/test_predictions.json');for(let m of ['cnn','baseline']){let acc=p.filter(x=>x[m+'_probs'].indexOf(Math.max(...x[m+'_probs']))===x.label).length/p.length;assert(Math.abs(acc-r.test[m].accuracy)<1e-9);}});
+console.log(tests+' tests passed');

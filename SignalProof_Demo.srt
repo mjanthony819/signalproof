@@ -1,0 +1,73 @@
+1
+00:00:00,000 --> 00:00:04,400
+SignalProof is an ECG artifact research lab, not a diagnostic tool.
+
+2
+00:00:04,400 --> 00:00:11,500
+It helps students compare a trained one-dimensional convolutional
+neural network with a spectral logistic regression baseline.
+
+3
+00:00:11,500 --> 00:00:16,500
+Start in Signal lab. Each example is eight seconds at 128 hertz.
+
+4
+00:00:16,500 --> 00:00:22,300
+Both trained models run locally, without a model API, paid service, or
+patient upload.
+
+5
+00:00:22,300 --> 00:00:29,100
+Their outputs are artifact signatures. Reference does not mean a
+normal rhythm or a clinically usable signal.
+
+6
+00:00:29,100 --> 00:00:33,899
+Here I select an electrode-motion example and compare the
+probabilities.
+
+7
+00:00:33,899 --> 00:00:40,700
+An exploratory abstention threshold makes low confidence visible, but
+it is not a validated safety guarantee.
+
+8
+00:00:40,700 --> 00:00:48,000
+I can save the signal, predictions and a research note to the local
+notebook, then export a backup.
+
+9
+00:00:48,000 --> 00:00:56,500
+Stress bench adds controlled digital perturbations. This is a before-
+and-after comparison, not a new ground-truth quality label.
+
+10
+00:00:56,500 --> 00:01:04,799
+Evidence shows the full protocol. Reference records are split before
+generating examples. Noise comes from separate time blocks.
+
+11
+00:01:04,799 --> 00:01:15,700
+On 1,800 held-out windows from three unseen reference records, the CNN
+achieves 50.8% accuracy and a macro F1 of 0.485.
+
+12
+00:01:15,700 --> 00:01:25,900
+The baseline reaches 46.6% and 0.411. The CNN has worse log loss, so
+deep learning does not win every metric.
+
+13
+00:01:25,900 --> 00:01:31,500
+Error explorer keeps incorrect predictions visible, with record
+offsets and injection settings.
+
+14
+00:01:31,500 --> 00:01:37,799
+The limits matter: artificial labels, just eleven reference records,
+and three shared noise sources.
+
+15
+00:01:37,799 --> 00:01:46,959
+SignalProof makes those limits part of the product, alongside
+reproducible training, real browser inference, tests and a detailed
+interview manual.

@@ -1,0 +1,15 @@
+/* SignalProof inference. No network, model API or remote code. */
+(function(root){
+'use strict';
+const mean=x=>x.reduce((a,b)=>a+b,0)/x.length;
+function norm(x){let m=mean(x),s=Math.sqrt(mean(x.map(v=>(v-m)**2)));return x.map(v=>(v-m)/(s+1e-8));}
+function softmax(z,t=1){let m=Math.max(...z);let e=z.map(v=>Math.exp((v-m)/t)),s=e.reduce((a,b)=>a+b,0);return e.map(v=>v/s);}
+function conv(x,w,b,stride,pad){let out=[],n=Math.floor((x[0].length+2*pad-w[0][0].length)/stride)+1;for(let o=0;o<w.length;o++){let a=new Float64Array(n);for(let t=0;t<n;t++){let v=b[o];for(let c=0;c<x.length;c++)for(let k=0;k<w[o][c].length;k++){let j=t*stride-pad+k;if(j>=0&&j<x[c].length)v+=x[c][j]*w[o][c][k];}a[t]=Math.max(0,v);}out.push(a);}return out;}
+const COS=Array.from({length:129},(_,k)=>Array.from({length:256},(_,j)=>Math.cos(2*Math.PI*k*j/256)));
+const SIN=Array.from({length:129},(_,k)=>Array.from({length:256},(_,j)=>Math.sin(2*Math.PI*k*j/256)));
+const HANN=Array.from({length:256},(_,j)=>.5-.5*Math.cos(2*Math.PI*j/256));
+function features(signal){let x=norm(signal),p=Array(129).fill(0);for(let a=0;a<=768;a+=128){let seg=x.slice(a,a+256),m=mean(seg);seg=seg.map((v,j)=>(v-m)*HANN[j]);for(let k=0;k<129;k++){let re=0,im=0;for(let j=0;j<256;j++){re+=seg[j]*COS[k][j];im-=seg[j]*SIN[k][j];}p[k]+=(re*re+im*im)*(k===0||k===128?1:2);}}let total=p.reduce((a,b)=>a+b,0),bands=[[0,.5],[.5,3],[3,8],[8,20],[20,40],[40,65]].map(([a,b])=>p.reduce((s,v,k)=>s+(k/2>=a&&k/2<b?v:0),0)/total);let d=x.slice(1).map((v,j)=>v-x[j]),dm=mean(d);return [...bands,mean(d.map(Math.abs)),Math.sqrt(mean(d.map(v=>(v-dm)**2))),mean(d.map(v=>v*v)),mean(x.map(v=>v**4)),Math.max(...x.map(Math.abs)),mean(x.slice(1).map((v,j)=>v*x[j]<0?1:0))];}
+function predict(signal,w){let x=norm(signal),c=w.cnn,c1=conv([x],c['conv1.weight'],c['conv1.bias'],4,4),c2=conv(c1,c['conv2.weight'],c['conv2.bias'],4,3),pool=c2.map(mean),z=c['fc.bias'].map((b,o)=>b+pool.reduce((s,v,i)=>s+v*c['fc.weight'][o][i],0));let f=features(signal),b=w.baseline,fz=f.map((v,i)=>(v-b.mean[i])/b.scale[i]);let bz=b.intercept.map((v,o)=>v+fz.reduce((s,q,i)=>s+q*b.coef[o][i],0));return {cnn:softmax(z,w.temperatures.cnn),baseline:softmax(bz,w.temperatures.baseline),features:f};}
+function validateCSV(text){if(typeof text!=='string'||text.length>100000)throw Error('Use one numeric column with exactly 1,024 rows, at most 100 KB.');let lines=text.trim().split(/\r?\n/);if(lines[0]?.trim().toLowerCase()==='signal')lines.shift();if(lines.length!==1024)throw Error('Expected exactly 1,024 numeric rows (8 seconds at 128 Hz). No automatic resampling.');let x=lines.map(l=>{if(!l.trim()||l.includes(',')||l.includes(';'))throw Error('One signal column only. Optional first row: signal.');let n=Number(l.trim());if(!Number.isFinite(n)||Math.abs(n)>1e6)throw Error('All samples must be finite numbers between -1,000,000 and 1,000,000.');return n;});if(Math.sqrt(mean(x.map(v=>(v-mean(x))**2)))<1e-6)throw Error('Flat or near-flat input cannot be normalized.');return x;}
+root.SignalProof={norm,features,predict,validateCSV};if(typeof module!=='undefined')module.exports=root.SignalProof;
+})(typeof window!=='undefined'?window:globalThis);

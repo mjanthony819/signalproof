@@ -1,0 +1,64 @@
+download https://physionet.org/files/nstdb/1.0.0/bw.hea
+download https://physionet.org/files/nstdb/1.0.0/bw.dat
+download https://physionet.org/files/nstdb/1.0.0/ma.hea
+download https://physionet.org/files/nstdb/1.0.0/ma.dat
+download https://physionet.org/files/nstdb/1.0.0/em.hea
+download https://physionet.org/files/nstdb/1.0.0/em.dat
+download https://physionet.org/files/mitdb/1.0.0/100.hea
+download https://physionet.org/files/mitdb/1.0.0/100.dat
+download https://physionet.org/files/mitdb/1.0.0/101.hea
+download https://physionet.org/files/mitdb/1.0.0/101.dat
+download https://physionet.org/files/mitdb/1.0.0/103.hea
+download https://physionet.org/files/mitdb/1.0.0/103.dat
+download https://physionet.org/files/mitdb/1.0.0/105.hea
+download https://physionet.org/files/mitdb/1.0.0/105.dat
+download https://physionet.org/files/mitdb/1.0.0/106.hea
+download https://physionet.org/files/mitdb/1.0.0/106.dat
+download https://physionet.org/files/mitdb/1.0.0/107.hea
+download https://physionet.org/files/mitdb/1.0.0/107.dat
+train (3600, 1024)
+download https://physionet.org/files/mitdb/1.0.0/108.hea
+download https://physionet.org/files/mitdb/1.0.0/108.dat
+download https://physionet.org/files/mitdb/1.0.0/109.hea
+download https://physionet.org/files/mitdb/1.0.0/109.dat
+validation (1200, 1024)
+download https://physionet.org/files/mitdb/1.0.0/111.hea
+download https://physionet.org/files/mitdb/1.0.0/111.dat
+download https://physionet.org/files/mitdb/1.0.0/112.hea
+download https://physionet.org/files/mitdb/1.0.0/112.dat
+download https://physionet.org/files/mitdb/1.0.0/113.hea
+download https://physionet.org/files/mitdb/1.0.0/113.dat
+test (1800, 1024)
+epoch 1 {'epoch': 1, 'train_loss': 1.3689194794358879, 'validation_nll': 1.3511385388088675, 'validation_accuracy': 0.38}
+epoch 2 {'epoch': 2, 'train_loss': 1.2902860764799446, 'validation_nll': 1.292589357795922, 'validation_accuracy': 0.3983333333333333}
+epoch 3 {'epoch': 3, 'train_loss': 1.1905827933344348, 'validation_nll': 1.312935169462545, 'validation_accuracy': 0.3983333333333333}
+epoch 4 {'epoch': 4, 'train_loss': 1.1641970461812512, 'validation_nll': 1.34552915358475, 'validation_accuracy': 0.47}
+epoch 5 {'epoch': 5, 'train_loss': 1.170307184087819, 'validation_nll': 1.3352512643267518, 'validation_accuracy': 0.4766666666666667}
+epoch 6 {'epoch': 6, 'train_loss': 1.1513992219135678, 'validation_nll': 1.349580905689067, 'validation_accuracy': 0.45916666666666667}
+epoch 7 {'epoch': 7, 'train_loss': 1.139702640730759, 'validation_nll': 1.3135971450881365, 'validation_accuracy': 0.49}
+epoch 8 {'epoch': 8, 'train_loss': 1.1380647133136619, 'validation_nll': 1.3300765108847403, 'validation_accuracy': 0.40166666666666667}
+epoch 9 {'epoch': 9, 'train_loss': 1.1246662139892578, 'validation_nll': 1.319195183004168, 'validation_accuracy': 0.45916666666666667}
+epoch 10 {'epoch': 10, 'train_loss': 1.1312686163803627, 'validation_nll': 1.3503611481484854, 'validation_accuracy': 0.48833333333333334}
+epoch 11 {'epoch': 11, 'train_loss': 1.116408479624781, 'validation_nll': 1.3216969314359146, 'validation_accuracy': 0.49083333333333334}
+epoch 12 {'epoch': 12, 'train_loss': 1.1112960001517986, 'validation_nll': 1.2851616091173403, 'validation_accuracy': 0.5216666666666666}
+epoch 13 {'epoch': 13, 'train_loss': 1.0896023203586709, 'validation_nll': 1.299516850436679, 'validation_accuracy': 0.4683333333333333}
+epoch 14 {'epoch': 14, 'train_loss': 1.0907475825013786, 'validation_nll': 1.2874336965810826, 'validation_accuracy': 0.5125}
+epoch 15 {'epoch': 15, 'train_loss': 1.0793689592131253, 'validation_nll': 1.267895982582283, 'validation_accuracy': 0.5516666666666666}
+epoch 16 {'epoch': 16, 'train_loss': 1.0755141028042496, 'validation_nll': 1.2684521466610503, 'validation_accuracy': 0.5491666666666667}
+epoch 17 {'epoch': 17, 'train_loss': 1.058062430085807, 'validation_nll': 1.2797045518294405, 'validation_accuracy': 0.5308333333333334}
+epoch 18 {'epoch': 18, 'train_loss': 1.0474865909280449, 'validation_nll': 1.2579815474725402, 'validation_accuracy': 0.5241666666666667}
+epoch 19 {'epoch': 19, 'train_loss': 1.0495712921537201, 'validation_nll': 1.2553891604145138, 'validation_accuracy': 0.5675}
+epoch 20 {'epoch': 20, 'train_loss': 1.0391627714551728, 'validation_nll': 1.2549513982861256, 'validation_accuracy': 0.5325}
+epoch 21 {'epoch': 21, 'train_loss': 1.039771708948859, 'validation_nll': 1.2336922418436513, 'validation_accuracy': 0.5241666666666667}
+epoch 22 {'epoch': 22, 'train_loss': 1.0106163764822071, 'validation_nll': 1.2103319643651282, 'validation_accuracy': 0.5741666666666667}
+epoch 23 {'epoch': 23, 'train_loss': 0.9939720178472584, 'validation_nll': 1.2006366959452104, 'validation_accuracy': 0.5716666666666667}
+epoch 24 {'epoch': 24, 'train_loss': 0.9921567912759452, 'validation_nll': 1.1883784484216815, 'validation_accuracy': 0.5791666666666667}
+epoch 25 {'epoch': 25, 'train_loss': 0.9743303800451344, 'validation_nll': 1.1809923961249587, 'validation_accuracy': 0.5941666666666666}
+epoch 26 {'epoch': 26, 'train_loss': 0.9692687392234802, 'validation_nll': 1.189816329081192, 'validation_accuracy': 0.56}
+epoch 27 {'epoch': 27, 'train_loss': 0.9554397319925243, 'validation_nll': 1.17293948848064, 'validation_accuracy': 0.5958333333333333}
+epoch 28 {'epoch': 28, 'train_loss': 0.9371846749864775, 'validation_nll': 1.166853224617439, 'validation_accuracy': 0.6008333333333333}
+epoch 29 {'epoch': 29, 'train_loss': 0.9367251540052479, 'validation_nll': 1.160921315028229, 'validation_accuracy': 0.5583333333333333}
+epoch 30 {'epoch': 30, 'train_loss': 0.9372233542902716, 'validation_nll': 1.1358741428651273, 'validation_accuracy': 0.6125}
+epoch 31 {'epoch': 31, 'train_loss': 0.9133153948290594, 'validation_nll': 1.1155033869868647, 'validation_accuracy': 0.5925}
+epoch 32 {'epoch': 32, 'train_loss': 0.910768488357807, 'validation_nll': 1.1271058967729275, 'validation_accuracy': 0.6066666666666667}
+FINAL {"baseline": {"accuracy": 0.4661, "macro_f1": 0.4109, "nll": 1.152, "ece_10_bins": 0.1409, "brier_multiclass": 0.6354, "coverage_at_0_7": 0.2167, "accuracy_at_0_7": 0.8256}, "cnn": {"accuracy": 0.5078, "macro_f1": 0.4854, "nll": 1.1764, "ece_10_bins": 0.1093, "brier_multiclass": 0.6136, "coverage_at_0_7": 0.0678, "accuracy_at_0_7": 0.9754}}

@@ -1,0 +1,1462 @@
+{
+  "seed": 42,
+  "classes": [
+    "Reference",
+    "Baseline wander",
+    "Muscle artifact",
+    "Electrode motion"
+  ],
+  "input": {
+    "sample_rate": 128,
+    "samples": 1024,
+    "seconds": 8
+  },
+  "records": {
+    "train": [
+      "100",
+      "101",
+      "103",
+      "105",
+      "106",
+      "107"
+    ],
+    "validation": [
+      "108",
+      "109"
+    ],
+    "test": [
+      "111",
+      "112",
+      "113"
+    ]
+  },
+  "noise_time_seconds": {
+    "train": [
+      0,
+      880
+    ],
+    "validation": [
+      910,
+      1300
+    ],
+    "test": [
+      1330,
+      1790
+    ]
+  },
+  "counts": {
+    "train": 3600,
+    "validation": 1200,
+    "test": 1800
+  },
+  "temperatures": {
+    "cnn": 1.3932881370244876,
+    "baseline": 2.118255459794475
+  },
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.3689194794358879,
+      "validation_nll": 1.3511385388088675,
+      "validation_accuracy": 0.38
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.2902860764799446,
+      "validation_nll": 1.292589357795922,
+      "validation_accuracy": 0.3983333333333333
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.1905827933344348,
+      "validation_nll": 1.312935169462545,
+      "validation_accuracy": 0.3983333333333333
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.1641970461812512,
+      "validation_nll": 1.34552915358475,
+      "validation_accuracy": 0.47
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.170307184087819,
+      "validation_nll": 1.3352512643267518,
+      "validation_accuracy": 0.4766666666666667
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1513992219135678,
+      "validation_nll": 1.349580905689067,
+      "validation_accuracy": 0.45916666666666667
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.139702640730759,
+      "validation_nll": 1.3135971450881365,
+      "validation_accuracy": 0.49
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.1380647133136619,
+      "validation_nll": 1.3300765108847403,
+      "validation_accuracy": 0.40166666666666667
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.1246662139892578,
+      "validation_nll": 1.319195183004168,
+      "validation_accuracy": 0.45916666666666667
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.1312686163803627,
+      "validation_nll": 1.3503611481484854,
+      "validation_accuracy": 0.48833333333333334
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.116408479624781,
+      "validation_nll": 1.3216969314359146,
+      "validation_accuracy": 0.49083333333333334
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.1112960001517986,
+      "validation_nll": 1.2851616091173403,
+      "validation_accuracy": 0.5216666666666666
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.0896023203586709,
+      "validation_nll": 1.299516850436679,
+      "validation_accuracy": 0.4683333333333333
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.0907475825013786,
+      "validation_nll": 1.2874336965810826,
+      "validation_accuracy": 0.5125
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.0793689592131253,
+      "validation_nll": 1.267895982582283,
+      "validation_accuracy": 0.5516666666666666
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.0755141028042496,
+      "validation_nll": 1.2684521466610503,
+      "validation_accuracy": 0.5491666666666667
+    },
+    {
+      "epoch": 17,
+      "train_loss": 1.058062430085807,
+      "validation_nll": 1.2797045518294405,
+      "validation_accuracy": 0.5308333333333334
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.0474865909280449,
+      "validation_nll": 1.2579815474725402,
+      "validation_accuracy": 0.5241666666666667
+    },
+    {
+      "epoch": 19,
+      "train_loss": 1.0495712921537201,
+      "validation_nll": 1.2553891604145138,
+      "validation_accuracy": 0.5675
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.0391627714551728,
+      "validation_nll": 1.2549513982861256,
+      "validation_accuracy": 0.5325
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.039771708948859,
+      "validation_nll": 1.2336922418436513,
+      "validation_accuracy": 0.5241666666666667
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.0106163764822071,
+      "validation_nll": 1.2103319643651282,
+      "validation_accuracy": 0.5741666666666667
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.9939720178472584,
+      "validation_nll": 1.2006366959452104,
+      "validation_accuracy": 0.5716666666666667
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.9921567912759452,
+      "validation_nll": 1.1883784484216815,
+      "validation_accuracy": 0.5791666666666667
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.9743303800451344,
+      "validation_nll": 1.1809923961249587,
+      "validation_accuracy": 0.5941666666666666
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.9692687392234802,
+      "validation_nll": 1.189816329081192,
+      "validation_accuracy": 0.56
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.9554397319925243,
+      "validation_nll": 1.17293948848064,
+      "validation_accuracy": 0.5958333333333333
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.9371846749864775,
+      "validation_nll": 1.166853224617439,
+      "validation_accuracy": 0.6008333333333333
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.9367251540052479,
+      "validation_nll": 1.160921315028229,
+      "validation_accuracy": 0.5583333333333333
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.9372233542902716,
+      "validation_nll": 1.1358741428651273,
+      "validation_accuracy": 0.6125
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.9133153948290594,
+      "validation_nll": 1.1155033869868647,
+      "validation_accuracy": 0.5925
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.910768488357807,
+      "validation_nll": 1.1271058967729275,
+      "validation_accuracy": 0.6066666666666667
+    }
+  ],
+  "test": {
+    "baseline": {
+      "accuracy": 0.4661111111111111,
+      "macro_f1": 0.41091031494778324,
+      "nll": 1.1519530068407182,
+      "ece_10_bins": 0.14085432706430115,
+      "brier_multiclass": 0.6354039935977996,
+      "confusion_matrix": [
+        [
+          10,
+          38,
+          125,
+          277
+        ],
+        [
+          1,
+          195,
+          74,
+          180
+        ],
+        [
+          0,
+          16,
+          297,
+          137
+        ],
+        [
+          1,
+          33,
+          79,
+          337
+        ]
+      ],
+      "per_class": {
+        "Reference": {
+          "precision": 0.8333333333333334,
+          "recall": 0.022222222222222223,
+          "f1-score": 0.04329004329004329,
+          "support": 450.0
+        },
+        "Baseline wander": {
+          "precision": 0.6914893617021277,
+          "recall": 0.43333333333333335,
+          "f1-score": 0.5327868852459017,
+          "support": 450.0
+        },
+        "Muscle artifact": {
+          "precision": 0.5165217391304348,
+          "recall": 0.66,
+          "f1-score": 0.5795121951219512,
+          "support": 450.0
+        },
+        "Electrode motion": {
+          "precision": 0.3619763694951665,
+          "recall": 0.7488888888888889,
+          "f1-score": 0.4880521361332368,
+          "support": 450.0
+        },
+        "accuracy": 0.4661111111111111,
+        "macro avg": {
+          "precision": 0.6008302009152655,
+          "recall": 0.46611111111111114,
+          "f1-score": 0.41091031494778324,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.6008302009152655,
+          "recall": 0.4661111111111111,
+          "f1-score": 0.41091031494778324,
+          "support": 1800.0
+        }
+      },
+      "coverage_at_0_7": 0.21666666666666667,
+      "accuracy_at_0_7": 0.8256410256410256
+    },
+    "cnn": {
+      "accuracy": 0.5077777777777778,
+      "macro_f1": 0.48539428501534687,
+      "nll": 1.1763714980226165,
+      "ece_10_bins": 0.10926279245151416,
+      "brier_multiclass": 0.6136260390802024,
+      "confusion_matrix": [
+        [
+          99,
+          64,
+          31,
+          256
+        ],
+        [
+          24,
+          241,
+          53,
+          132
+        ],
+        [
+          14,
+          96,
+          184,
+          156
+        ],
+        [
+          15,
+          29,
+          16,
+          390
+        ]
+      ],
+      "per_class": {
+        "Reference": {
+          "precision": 0.6513157894736842,
+          "recall": 0.22,
+          "f1-score": 0.3289036544850498,
+          "support": 450.0
+        },
+        "Baseline wander": {
+          "precision": 0.5604651162790698,
+          "recall": 0.5355555555555556,
+          "f1-score": 0.5477272727272727,
+          "support": 450.0
+        },
+        "Muscle artifact": {
+          "precision": 0.647887323943662,
+          "recall": 0.4088888888888889,
+          "f1-score": 0.5013623978201635,
+          "support": 450.0
+        },
+        "Electrode motion": {
+          "precision": 0.41755888650963596,
+          "recall": 0.8666666666666667,
+          "f1-score": 0.5635838150289018,
+          "support": 450.0
+        },
+        "accuracy": 0.5077777777777778,
+        "macro avg": {
+          "precision": 0.569306779051513,
+          "recall": 0.5077777777777778,
+          "f1-score": 0.48539428501534687,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.569306779051513,
+          "recall": 0.5077777777777778,
+          "f1-score": 0.4853942850153469,
+          "support": 1800.0
+        }
+      },
+      "coverage_at_0_7": 0.06777777777777778,
+      "accuracy_at_0_7": 0.9754098360655737
+    }
+  },
+  "by_snr": {
+    "baseline": {
+      "-6": {
+        "accuracy": 0.3823146944083225,
+        "macro_f1": 0.43328788056511314,
+        "nll": 1.283361523276625,
+        "ece_10_bins": 0.22235841071789955,
+        "brier_multiclass": 0.7111161719359519,
+        "confusion_matrix": [
+          [
+            10,
+            38,
+            125,
+            277
+          ],
+          [
+            0,
+            106,
+            6,
+            6
+          ],
+          [
+            0,
+            4,
+            89,
+            6
+          ],
+          [
+            0,
+            12,
+            1,
+            89
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1-score": 0.043478260869565216,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.6625,
+            "recall": 0.8983050847457628,
+            "f1-score": 0.762589928057554,
+            "support": 118.0
+          },
+          "Muscle artifact": {
+            "precision": 0.40271493212669685,
+            "recall": 0.898989898989899,
+            "f1-score": 0.55625,
+            "support": 99.0
+          },
+          "Electrode motion": {
+            "precision": 0.23544973544973544,
+            "recall": 0.8725490196078431,
+            "f1-score": 0.37083333333333335,
+            "support": 102.0
+          },
+          "accuracy": 0.3823146944083225,
+          "macro avg": {
+            "precision": 0.575166166894108,
+            "recall": 0.6730165563914318,
+            "f1-score": 0.43328788056511314,
+            "support": 769.0
+          },
+          "weighted avg": {
+            "precision": 0.769908519241113,
+            "recall": 0.3823146944083225,
+            "f1-score": 0.2632569296516199,
+            "support": 769.0
+          }
+        },
+        "coverage_at_0_7": 0.20546163849154747,
+        "accuracy_at_0_7": 0.7848101265822784
+      },
+      "0": {
+        "accuracy": 0.32229299363057323,
+        "macro_f1": 0.3592017125288253,
+        "nll": 1.3452070998480201,
+        "ece_10_bins": 0.26772179639055427,
+        "brier_multiclass": 0.7555933219188413,
+        "confusion_matrix": [
+          [
+            10,
+            38,
+            125,
+            277
+          ],
+          [
+            0,
+            55,
+            12,
+            47
+          ],
+          [
+            0,
+            2,
+            97,
+            9
+          ],
+          [
+            0,
+            5,
+            17,
+            91
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1-score": 0.043478260869565216,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.55,
+            "recall": 0.4824561403508772,
+            "f1-score": 0.514018691588785,
+            "support": 114.0
+          },
+          "Muscle artifact": {
+            "precision": 0.38645418326693226,
+            "recall": 0.8981481481481481,
+            "f1-score": 0.5403899721448467,
+            "support": 108.0
+          },
+          "Electrode motion": {
+            "precision": 0.21462264150943397,
+            "recall": 0.8053097345132744,
+            "f1-score": 0.33891992551210426,
+            "support": 113.0
+          },
+          "accuracy": 0.32229299363057323,
+          "macro avg": {
+            "precision": 0.5377692061940915,
+            "recall": 0.5520340613086305,
+            "f1-score": 0.3592017125288253,
+            "support": 785.0
+          },
+          "weighted avg": {
+            "precision": 0.7371839621444519,
+            "recall": 0.32229299363057323,
+            "f1-score": 0.22270498956297716,
+            "support": 785.0
+          }
+        },
+        "coverage_at_0_7": 0.18089171974522292,
+        "accuracy_at_0_7": 0.7535211267605634
+      },
+      "6": {
+        "accuracy": 0.23143564356435645,
+        "macro_f1": 0.23548416634931765,
+        "nll": 1.4780816656808267,
+        "ece_10_bins": 0.3437258325325959,
+        "brier_multiclass": 0.8366762260755921,
+        "confusion_matrix": [
+          [
+            10,
+            38,
+            125,
+            277
+          ],
+          [
+            0,
+            20,
+            19,
+            59
+          ],
+          [
+            0,
+            3,
+            75,
+            56
+          ],
+          [
+            0,
+            8,
+            36,
+            82
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 1.0,
+            "recall": 0.022222222222222223,
+            "f1-score": 0.043478260869565216,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.2898550724637681,
+            "recall": 0.20408163265306123,
+            "f1-score": 0.23952095808383234,
+            "support": 98.0
+          },
+          "Muscle artifact": {
+            "precision": 0.29411764705882354,
+            "recall": 0.5597014925373134,
+            "f1-score": 0.3856041131105398,
+            "support": 134.0
+          },
+          "Electrode motion": {
+            "precision": 0.1729957805907173,
+            "recall": 0.6507936507936508,
+            "f1-score": 0.2733333333333333,
+            "support": 126.0
+          },
+          "accuracy": 0.23143564356435645,
+          "macro avg": {
+            "precision": 0.43924212502832727,
+            "recall": 0.3591997495515619,
+            "f1-score": 0.23548416634931765,
+            "support": 808.0
+          },
+          "weighted avg": {
+            "precision": 0.6678403838635668,
+            "recall": 0.23143564356435645,
+            "f1-score": 0.15983814658456963,
+            "support": 808.0
+          }
+        },
+        "coverage_at_0_7": 0.13861386138613863,
+        "accuracy_at_0_7": 0.5982142857142857
+      },
+      "12": {
+        "accuracy": 0.1713197969543147,
+        "macro_f1": 0.16549774345663787,
+        "nll": 1.6775310851870706,
+        "ece_10_bins": 0.3932379815949433,
+        "brier_multiclass": 0.9257094910789515,
+        "confusion_matrix": [
+          [
+            10,
+            38,
+            125,
+            277
+          ],
+          [
+            1,
+            14,
+            37,
+            68
+          ],
+          [
+            0,
+            7,
+            36,
+            66
+          ],
+          [
+            1,
+            8,
+            25,
+            75
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.8333333333333334,
+            "recall": 0.022222222222222223,
+            "f1-score": 0.04329004329004329,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.208955223880597,
+            "recall": 0.11666666666666667,
+            "f1-score": 0.1497326203208556,
+            "support": 120.0
+          },
+          "Muscle artifact": {
+            "precision": 0.16143497757847533,
+            "recall": 0.3302752293577982,
+            "f1-score": 0.21686746987951808,
+            "support": 109.0
+          },
+          "Electrode motion": {
+            "precision": 0.15432098765432098,
+            "recall": 0.6880733944954128,
+            "f1-score": 0.25210084033613445,
+            "support": 109.0
+          },
+          "accuracy": 0.1713197969543147,
+          "macro avg": {
+            "precision": 0.3395111306116817,
+            "recall": 0.289309378185525,
+            "f1-score": 0.16549774345663787,
+            "support": 788.0
+          },
+          "weighted avg": {
+            "precision": 0.5513858211624955,
+            "recall": 0.1713197969543147,
+            "f1-score": 0.11239337529508664,
+            "support": 788.0
+          }
+        },
+        "coverage_at_0_7": 0.09390862944162437,
+        "accuracy_at_0_7": 0.32432432432432434
+      }
+    },
+    "cnn": {
+      "-6": {
+        "accuracy": 0.48764629388816644,
+        "macro_f1": 0.5354467366082566,
+        "nll": 1.3047501848610314,
+        "ece_10_bins": 0.1497833481535645,
+        "brier_multiclass": 0.6431441984451962,
+        "confusion_matrix": [
+          [
+            99,
+            64,
+            31,
+            256
+          ],
+          [
+            0,
+            110,
+            8,
+            0
+          ],
+          [
+            0,
+            23,
+            75,
+            1
+          ],
+          [
+            0,
+            9,
+            2,
+            91
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 1.0,
+            "recall": 0.22,
+            "f1-score": 0.36065573770491804,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.5339805825242718,
+            "recall": 0.9322033898305084,
+            "f1-score": 0.6790123456790124,
+            "support": 118.0
+          },
+          "Muscle artifact": {
+            "precision": 0.646551724137931,
+            "recall": 0.7575757575757576,
+            "f1-score": 0.6976744186046512,
+            "support": 99.0
+          },
+          "Electrode motion": {
+            "precision": 0.2614942528735632,
+            "recall": 0.8921568627450981,
+            "f1-score": 0.40444444444444444,
+            "support": 102.0
+          },
+          "accuracy": 0.48764629388816644,
+          "macro avg": {
+            "precision": 0.6105066398839415,
+            "recall": 0.700484002537841,
+            "f1-score": 0.5354467366082566,
+            "support": 769.0
+          },
+          "weighted avg": {
+            "precision": 0.7850334762296786,
+            "recall": 0.48764629388816644,
+            "f1-score": 0.45870174191486396,
+            "support": 769.0
+          }
+        },
+        "coverage_at_0_7": 0.11443433029908973,
+        "accuracy_at_0_7": 0.9772727272727273
+      },
+      "0": {
+        "accuracy": 0.44331210191082804,
+        "macro_f1": 0.4727426120205277,
+        "nll": 1.3833302940092962,
+        "ece_10_bins": 0.10210846863734495,
+        "brier_multiclass": 0.6912653798714238,
+        "confusion_matrix": [
+          [
+            99,
+            64,
+            31,
+            256
+          ],
+          [
+            0,
+            79,
+            19,
+            16
+          ],
+          [
+            0,
+            32,
+            64,
+            12
+          ],
+          [
+            0,
+            5,
+            2,
+            106
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 1.0,
+            "recall": 0.22,
+            "f1-score": 0.36065573770491804,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.4388888888888889,
+            "recall": 0.6929824561403509,
+            "f1-score": 0.5374149659863946,
+            "support": 114.0
+          },
+          "Muscle artifact": {
+            "precision": 0.5517241379310345,
+            "recall": 0.5925925925925926,
+            "f1-score": 0.5714285714285714,
+            "support": 108.0
+          },
+          "Electrode motion": {
+            "precision": 0.2717948717948718,
+            "recall": 0.9380530973451328,
+            "f1-score": 0.42147117296222664,
+            "support": 113.0
+          },
+          "accuracy": 0.44331210191082804,
+          "macro avg": {
+            "precision": 0.5656019746536988,
+            "recall": 0.610907036519519,
+            "f1-score": 0.4727426120205277,
+            "support": 785.0
+          },
+          "weighted avg": {
+            "precision": 0.7520157461690516,
+            "recall": 0.44331210191082804,
+            "f1-score": 0.4240776004441776,
+            "support": 785.0
+          }
+        },
+        "coverage_at_0_7": 0.04331210191082802,
+        "accuracy_at_0_7": 0.9705882352941176
+      },
+      "6": {
+        "accuracy": 0.34529702970297027,
+        "macro_f1": 0.3317281903652067,
+        "nll": 1.5039414096947032,
+        "ece_10_bins": 0.11270436316285981,
+        "brier_multiclass": 0.761529785429816,
+        "confusion_matrix": [
+          [
+            99,
+            64,
+            31,
+            256
+          ],
+          [
+            2,
+            30,
+            12,
+            54
+          ],
+          [
+            3,
+            22,
+            36,
+            73
+          ],
+          [
+            2,
+            7,
+            3,
+            114
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.9339622641509434,
+            "recall": 0.22,
+            "f1-score": 0.35611510791366907,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.24390243902439024,
+            "recall": 0.30612244897959184,
+            "f1-score": 0.27149321266968324,
+            "support": 98.0
+          },
+          "Muscle artifact": {
+            "precision": 0.43902439024390244,
+            "recall": 0.26865671641791045,
+            "f1-score": 0.3333333333333333,
+            "support": 134.0
+          },
+          "Electrode motion": {
+            "precision": 0.22937625754527163,
+            "recall": 0.9047619047619048,
+            "f1-score": 0.36597110754414125,
+            "support": 126.0
+          },
+          "accuracy": 0.34529702970297027,
+          "macro avg": {
+            "precision": 0.4615663377411269,
+            "recall": 0.4248852675398518,
+            "f1-score": 0.3317281903652067,
+            "support": 808.0
+          },
+          "weighted avg": {
+            "precision": 0.6583120478164627,
+            "recall": 0.34529702970297027,
+            "f1-score": 0.34361034606436697,
+            "support": 808.0
+          }
+        },
+        "coverage_at_0_7": 0.0024752475247524753,
+        "accuracy_at_0_7": 0.0
+      },
+      "12": {
+        "accuracy": 0.2652284263959391,
+        "macro_f1": 0.22514275732667222,
+        "nll": 1.6244812214851536,
+        "ece_10_bins": 0.1585301759128038,
+        "brier_multiclass": 0.8204677467840265,
+        "confusion_matrix": [
+          [
+            99,
+            64,
+            31,
+            256
+          ],
+          [
+            22,
+            22,
+            14,
+            62
+          ],
+          [
+            11,
+            19,
+            9,
+            70
+          ],
+          [
+            13,
+            8,
+            9,
+            79
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.6827586206896552,
+            "recall": 0.22,
+            "f1-score": 0.33277310924369746,
+            "support": 450.0
+          },
+          "Baseline wander": {
+            "precision": 0.19469026548672566,
+            "recall": 0.18333333333333332,
+            "f1-score": 0.1888412017167382,
+            "support": 120.0
+          },
+          "Muscle artifact": {
+            "precision": 0.14285714285714285,
+            "recall": 0.08256880733944955,
+            "f1-score": 0.10465116279069768,
+            "support": 109.0
+          },
+          "Electrode motion": {
+            "precision": 0.16916488222698073,
+            "recall": 0.7247706422018348,
+            "f1-score": 0.2743055555555556,
+            "support": 109.0
+          },
+          "accuracy": 0.2652284263959391,
+          "macro avg": {
+            "precision": 0.2973677278151261,
+            "recall": 0.30266819571865444,
+            "f1-score": 0.22514275732667222,
+            "support": 788.0
+          },
+          "weighted avg": {
+            "precision": 0.4627088983539612,
+            "recall": 0.2652284263959391,
+            "f1-score": 0.27121208840788585,
+            "support": 788.0
+          }
+        },
+        "coverage_at_0_7": 0.0012690355329949238,
+        "accuracy_at_0_7": 0.0
+      }
+    }
+  },
+  "per_record": {
+    "baseline": {
+      "111": {
+        "accuracy": 0.4533333333333333,
+        "macro_f1": 0.3946453516239879,
+        "nll": 1.248687963509093,
+        "ece_10_bins": 0.13494442613424099,
+        "brier_multiclass": 0.6612698490864463,
+        "confusion_matrix": [
+          [
+            0,
+            28,
+            120,
+            2
+          ],
+          [
+            0,
+            81,
+            65,
+            4
+          ],
+          [
+            0,
+            14,
+            134,
+            2
+          ],
+          [
+            0,
+            19,
+            74,
+            57
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.5704225352112676,
+            "recall": 0.54,
+            "f1-score": 0.5547945205479452,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.34096692111959287,
+            "recall": 0.8933333333333333,
+            "f1-score": 0.49355432780847147,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.8769230769230769,
+            "recall": 0.38,
+            "f1-score": 0.5302325581395348,
+            "support": 150.0
+          },
+          "accuracy": 0.4533333333333333,
+          "macro avg": {
+            "precision": 0.44707813331348434,
+            "recall": 0.45333333333333337,
+            "f1-score": 0.3946453516239879,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.44707813331348445,
+            "recall": 0.4533333333333333,
+            "f1-score": 0.3946453516239879,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.25666666666666665,
+        "accuracy_at_0_7": 0.7792207792207793
+      },
+      "112": {
+        "accuracy": 0.46,
+        "macro_f1": 0.4094142374708774,
+        "nll": 1.167093607430211,
+        "ece_10_bins": 0.2008379471921957,
+        "brier_multiclass": 0.6616728611056505,
+        "confusion_matrix": [
+          [
+            0,
+            4,
+            5,
+            141
+          ],
+          [
+            0,
+            51,
+            7,
+            92
+          ],
+          [
+            0,
+            0,
+            86,
+            64
+          ],
+          [
+            0,
+            6,
+            5,
+            139
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.8360655737704918,
+            "recall": 0.34,
+            "f1-score": 0.4834123222748815,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.8349514563106796,
+            "recall": 0.5733333333333334,
+            "f1-score": 0.6798418972332015,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.31880733944954126,
+            "recall": 0.9266666666666666,
+            "f1-score": 0.47440273037542663,
+            "support": 150.0
+          },
+          "accuracy": 0.46,
+          "macro avg": {
+            "precision": 0.49745609238267813,
+            "recall": 0.45999999999999996,
+            "f1-score": 0.4094142374708774,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.49745609238267813,
+            "recall": 0.46,
+            "f1-score": 0.40941423747087746,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.235,
+        "accuracy_at_0_7": 0.7872340425531915
+      },
+      "113": {
+        "accuracy": 0.485,
+        "macro_f1": 0.4580927775639917,
+        "nll": 1.0400774495828504,
+        "ece_10_bins": 0.13226272759287167,
+        "brier_multiclass": 0.5832692706013023,
+        "confusion_matrix": [
+          [
+            10,
+            6,
+            0,
+            134
+          ],
+          [
+            1,
+            63,
+            2,
+            84
+          ],
+          [
+            0,
+            2,
+            77,
+            71
+          ],
+          [
+            1,
+            8,
+            0,
+            141
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.8333333333333334,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.12345679012345678,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.7974683544303798,
+            "recall": 0.42,
+            "f1-score": 0.5502183406113537,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.9746835443037974,
+            "recall": 0.5133333333333333,
+            "f1-score": 0.6724890829694323,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.32790697674418606,
+            "recall": 0.94,
+            "f1-score": 0.4862068965517241,
+            "support": 150.0
+          },
+          "accuracy": 0.485,
+          "macro avg": {
+            "precision": 0.7333480522029241,
+            "recall": 0.485,
+            "f1-score": 0.4580927775639917,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.7333480522029241,
+            "recall": 0.485,
+            "f1-score": 0.45809277756399175,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.15833333333333333,
+        "accuracy_at_0_7": 0.9578947368421052
+      }
+    },
+    "cnn": {
+      "111": {
+        "accuracy": 0.5166666666666667,
+        "macro_f1": 0.4964318851217421,
+        "nll": 1.1943094115147475,
+        "ece_10_bins": 0.1003408582508564,
+        "brier_multiclass": 0.6110148512271399,
+        "confusion_matrix": [
+          [
+            43,
+            36,
+            7,
+            64
+          ],
+          [
+            12,
+            94,
+            5,
+            39
+          ],
+          [
+            7,
+            47,
+            50,
+            46
+          ],
+          [
+            10,
+            12,
+            5,
+            123
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.5972222222222222,
+            "recall": 0.2866666666666667,
+            "f1-score": 0.38738738738738737,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.4973544973544973,
+            "recall": 0.6266666666666667,
+            "f1-score": 0.5545722713864307,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.746268656716418,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.4608294930875576,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.4522058823529412,
+            "recall": 0.82,
+            "f1-score": 0.5829383886255924,
+            "support": 150.0
+          },
+          "accuracy": 0.5166666666666667,
+          "macro avg": {
+            "precision": 0.5732628146615196,
+            "recall": 0.5166666666666666,
+            "f1-score": 0.4964318851217421,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.5732628146615196,
+            "recall": 0.5166666666666667,
+            "f1-score": 0.496431885121742,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.08166666666666667,
+        "accuracy_at_0_7": 0.9387755102040817
+      },
+      "112": {
+        "accuracy": 0.46,
+        "macro_f1": 0.3877419195500357,
+        "nll": 1.263163678421498,
+        "ece_10_bins": 0.15646485706170402,
+        "brier_multiclass": 0.6572804462033306,
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            24,
+            123
+          ],
+          [
+            0,
+            47,
+            45,
+            58
+          ],
+          [
+            0,
+            4,
+            91,
+            55
+          ],
+          [
+            0,
+            4,
+            8,
+            138
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.8103448275862069,
+            "recall": 0.31333333333333335,
+            "f1-score": 0.4519230769230769,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.5416666666666666,
+            "recall": 0.6066666666666667,
+            "f1-score": 0.5723270440251572,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.3689839572192513,
+            "recall": 0.92,
+            "f1-score": 0.5267175572519084,
+            "support": 150.0
+          },
+          "accuracy": 0.46,
+          "macro avg": {
+            "precision": 0.43024886286803116,
+            "recall": 0.46,
+            "f1-score": 0.3877419195500357,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.43024886286803127,
+            "recall": 0.46,
+            "f1-score": 0.3877419195500356,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.06166666666666667,
+        "accuracy_at_0_7": 1.0
+      },
+      "113": {
+        "accuracy": 0.5466666666666666,
+        "macro_f1": 0.5271897555625606,
+        "nll": 1.0716414041316038,
+        "ece_10_bins": 0.10597233057022093,
+        "brier_multiclass": 0.5725828198101374,
+        "confusion_matrix": [
+          [
+            56,
+            25,
+            0,
+            69
+          ],
+          [
+            12,
+            100,
+            3,
+            35
+          ],
+          [
+            7,
+            45,
+            43,
+            55
+          ],
+          [
+            5,
+            13,
+            3,
+            129
+          ]
+        ],
+        "per_class": {
+          "Reference": {
+            "precision": 0.7,
+            "recall": 0.37333333333333335,
+            "f1-score": 0.48695652173913045,
+            "support": 150.0
+          },
+          "Baseline wander": {
+            "precision": 0.546448087431694,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6006006006006006,
+            "support": 150.0
+          },
+          "Muscle artifact": {
+            "precision": 0.8775510204081632,
+            "recall": 0.2866666666666667,
+            "f1-score": 0.4321608040201005,
+            "support": 150.0
+          },
+          "Electrode motion": {
+            "precision": 0.4479166666666667,
+            "recall": 0.86,
+            "f1-score": 0.589041095890411,
+            "support": 150.0
+          },
+          "accuracy": 0.5466666666666666,
+          "macro avg": {
+            "precision": 0.6429789436266309,
+            "recall": 0.5466666666666666,
+            "f1-score": 0.5271897555625606,
+            "support": 600.0
+          },
+          "weighted avg": {
+            "precision": 0.642978943626631,
+            "recall": 0.5466666666666666,
+            "f1-score": 0.5271897555625606,
+            "support": 600.0
+          }
+        },
+        "coverage_at_0_7": 0.06,
+        "accuracy_at_0_7": 1.0
+      }
+    }
+  },
+  "latency_ms": {
+    "baseline": {
+      "median": 0.3897935000054531,
+      "p95": 0.4480919999849675,
+      "environment": "CPU Python, four torch threads; not browser latency"
+    },
+    "cnn": {
+      "median": 0.1375754999912715,
+      "p95": 0.16507865000079391,
+      "environment": "CPU Python, four torch threads; not browser latency"
+    }
+  },
+  "protocol": "Record-disjoint reference ECGs; disjoint time blocks of the same three noise recordings; additive semi-synthetic labels, not clinical quality labels.",
+  "elapsed_seconds": 58.38380765914917
+}
